@@ -9,7 +9,12 @@ export function middleware(request: NextRequest) {
   const path = request.nextUrl.pathname;
   //  lets see the public path
   const isPublicPath =
-    path === "/login" || path === "/signup" || path === "/verifyemail";
+    path === "/login" ||
+    path === "/signup" ||
+    path === "/verifyemail" ||
+    path === "/forgot-password" ||
+    path === "/reset-password";
+
   const token = request.cookies.get("token")?.value || "";
 
   // so if the path is public and u have a token. that means u should not visit the login and signup
@@ -27,10 +32,12 @@ export function middleware(request: NextRequest) {
 // this is the matching part, on what route u have to match and run middleware
 export const config = {
   matcher: [
-    "/", // exact homepage
-    "/login", // exact login page
+    "/", // home
+    "/login",
     "/signup",
-    "/verifyemail", // exact signup page
-    "/profile/:path*", // match /profile and any subpaths like /profile/edit
+    "/verifyemail",
+    "/forgot-password", // public
+    "/reset-password", // public
+    "/profile/:path*", // protected
   ],
 };

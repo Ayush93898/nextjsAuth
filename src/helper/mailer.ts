@@ -36,7 +36,10 @@ export const sendEmail = async ({ email, emailType, userID }: any) => {
     });
 
     const domain = "http://localhost:3000";
-    const link = `${domain}/verifyemail?token=${token}`;
+    const link =
+      emailType === "VERIFY"
+        ? `${domain}/verifyemail?token=${token}`
+        : `${domain}/reset-password?token=${token}`;
 
     // mailOptions
     const mailOptions = {
