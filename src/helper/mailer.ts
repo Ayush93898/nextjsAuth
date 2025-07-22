@@ -30,8 +30,8 @@ export const sendEmail = async ({ email, emailType, userID }: any) => {
       host: "sandbox.smtp.mailtrap.io",
       port: 2525,
       auth: {
-        user: "cc6ee8fed04922",
-        pass: "b7a954124e375e", // todo-inko env variable me patakna
+        user: process.env.USER_KEY,
+        pass: process.env.PASS_KEY, // todo-inko env variable me patakna
       },
     });
 
@@ -40,7 +40,7 @@ export const sendEmail = async ({ email, emailType, userID }: any) => {
 
     // mailOptions
     const mailOptions = {
-      from: "aa2117354@gmail.com",
+      from: process.env.MAIL_ID,
       to: email,
       subject:
         emailType === "VERIFY" ? "Verify your email" : "Reset your password",
