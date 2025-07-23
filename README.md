@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Full-Stack Authentication System with Next.js & TypeScript
 
-## Getting Started
+A modern, secure, and responsive full-stack authentication system built using **Next.js (App Router + TypeScript)**. Designed with a **Cyberpunk-inspired UI**, this project includes essential auth features like login, signup, email verification, password reset, JWT-based security, and protected routes.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+● **User Authentication** – Signup & login using **JWT (JSON Web Tokens)**  
+● **Email Verification** – Email confirmation using **Nodemailer** and **EmailTrap (SMTP)**  
+● **Forgot Password Flow** – Secure token-based password reset via email  
+● **Change Password** – Accessible only to authenticated users  
+● **Protected Routes Middleware** – Blocks unauthorized access to private routes  
+● **Token Display Page** – After login, users are redirected to a page showing their token as a clickable link  
+● **Real-Time Feedback** – Toast notifications and error handling for a smoother UX  
+● **Modern UI** – Responsive, dark-theme UI styled with **Tailwind CSS** (inspired by Cyberpunk 2077)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+● **Framework**: [Next.js 14](https://nextjs.org/) (App Router)  
+● **Language**: TypeScript  
+● **Database**: MongoDB with Mongoose  
+● **Authentication**: JSON Web Tokens (JWT)  
+● **Email Services**: Nodemailer + EmailTrap (SMTP)  
+● **Styling**: Tailwind CSS (custom dark theme)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 What I Learned
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project was initially inspired by a course from **[@HiteshChoudhary](https://www.linkedin.com/in/hiteshchoudharyofficial/)**, which helped me understand the fundamentals of authentication systems. I then extended it by:
 
-## Deploy on Vercel
+● Rewriting and optimizing core logic for **real-world use cases**  
+● Adding advanced features like **email verification**, **token-based password reset**, and **route protection**  
+● Designing a **custom UI** from scratch with a **Cyberpunk theme**  
+● Gaining hands-on experience with **Next.js API routes**, **middleware**, and **full-stack TypeScript integration**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
